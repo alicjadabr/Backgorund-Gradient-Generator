@@ -8,8 +8,24 @@
 	<h1>Background Generator</h1>
 	<input class="color1" type="color" name="color1" value="#00ff00">
 	<input class="color2" type="color" name="color2" value="#ff0000">
-	<h2>Current CSS Background</h2>
-	<h3></h3>
+	<ul>Możesz zmienić kierunek:
+		<li>↦ W prawo&emsp;<button class="changeDir" id="right">Zmień</button></li>
+		<li>↤ W lewo&emsp;<button class="changeDir" id="left">Zmień</button></li>
+		<li>↧ Do dołu&emsp;<button class="changeDir" id="bottom">Zmień</button></li>
+		<li>↥ Do góry&emsp;<button class="changeDir" id="top">Zmień</button></li>
+		<li>Lub ustaw kąt nachylenia!</li>
+		<input class="deg" type="text" placeholder="Wpisz tutaj dowolny stopień">
+	</ul>
+	<h2>Kod CSS: </h2>
+	<p id="property"></p>
+	<button type="button" class="btn" onclick="copyToClipboard()">Kopiuj</button>
 	<script type="text/javascript" src="script.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+

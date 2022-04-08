@@ -1,8 +1,8 @@
-var css = document.querySelector("h3");
+var css = document.querySelector("p");
 var color1 = document.querySelector(".color1");
 var color2 = document.querySelector(".color2");
-var body = document.getElementById("gradient");
-
+var body = document.getElementById("gradient")
+  
 function setGradient() {
 	body.style.background = 
 	"linear-gradient(to right, " 
@@ -17,3 +17,25 @@ function setGradient() {
 color1.addEventListener("input", setGradient);
 
 color2.addEventListener("input", setGradient);
+
+function copyToClipboard() {
+	/* Get the text field */
+	var copyText = css.textContent;
+	 /* Copy the text inside the text field */
+	navigator.clipboard.writeText(copyText);
+}
+
+function setDirection(direction) {
+	body.style.background = 
+	"linear-gradient("
+	+ direction
+	+ ", " 
+	+ color1.value 
+	+ ", " 
+	+ color2.value 
+	+ ")";
+
+	css.textContent = body.style.background + ";";
+}
+
+
