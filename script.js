@@ -1,7 +1,9 @@
 var css = document.querySelector("p");
 var color1 = document.querySelector(".color1");
 var color2 = document.querySelector(".color2");
-var body = document.getElementById("gradient")
+var body = document.getElementById("gradient");
+var input = document.getElementById("userinput"); 
+
   
 function setGradient() {
 	body.style.background = 
@@ -37,5 +39,19 @@ function setDirection(direction) {
 
 	css.textContent = body.style.background + ";";
 }
+
+
+function inputLength() {
+	return input.value.length;
+}
+
+function setDegs(event) {
+	if (inputLength() > 0 && event.keyCode === 13) {
+		const degrees = input.value + "deg";
+		setDirection(degrees);
+	}
+}
+
+input.addEventListener("keypress", setDegs);
 
 

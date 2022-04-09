@@ -5,16 +5,16 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body id="gradient">
-	<h1>Background Generator</h1>
-	<input class="color1" type="color" name="color1" value="#00ff00">
-	<input class="color2" type="color" name="color2" value="#ff0000">
+	<h1>Gradient Background Generator</h1>
+	<input class="color1" type="color" name="color1" value="#090979">
+	<input class="color2" type="color" name="color2" value="#ea00ff">
 	<ul>Możesz zmienić kierunek:
-		<li>↦ W prawo&emsp;<button class="changeDir" id="right">Zmień</button></li>
-		<li>↤ W lewo&emsp;<button class="changeDir" id="left">Zmień</button></li>
-		<li>↧ Do dołu&emsp;<button class="changeDir" id="bottom">Zmień</button></li>
-		<li>↥ Do góry&emsp;<button class="changeDir" id="top">Zmień</button></li>
-		<li>Lub ustaw kąt nachylenia!</li>
-		<input class="deg" type="text" placeholder="Wpisz tutaj dowolny stopień">
+		<li>↦ W prawo&emsp;<button class="changeDir" onclick="setDirection('90deg')">Zmień</button></li>
+		<li>↤ W lewo&emsp;<button class="changeDir" onclick="setDirection('-90deg')">Zmień</button></li>
+		<li>↧ Do dołu&emsp;<button class="changeDir" onclick="setDirection('180deg')">Zmień</button></li>
+		<li>↥ Do góry&emsp;<button class="changeDir" onclick="setDirection('0deg')">Zmień</button></li>
+		<li>Lub ustaw dowolny kąt nachylenia!</li>
+		<input class="deg" id="userinput" type="text" placeholder="Wprowadz stopien">
 	</ul>
 	<h2>Kod CSS: </h2>
 	<p id="property"></p>
@@ -22,6 +22,8 @@
 	<script type="text/javascript" src="script.js"></script>
 </body>
 </html>
+
+
 
 
 
